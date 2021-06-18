@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+    </script>
+
+    <button id="fortuneButton">Get a Fortune</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("fortuneButton").onclick = function () {
+        axios.get("http:localhost:4000/api/fortune")
+          .then(function (response) {
+            const data = response.data;
+            alert(data);
+          });
+      }
+    </script>
+
+    <button id="heroButton">What Super Hero are You?</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("heroButton").onclick = function () {
+        axios.get("http:localhost:4000/api/superhero").then(function (response) {
+          const data = response.data;
+          alert(data);
+        });
+      }
+    </script>
+
+    <button id=aussieButton>Rough day? Click me.</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("aussieButton").onclick = function () {
+        axios.get("http:localhost:4000/api/photo").then(function (response) {
+          const data = response.data;
+          window.open(data);
+        });
+      }
+    </script>
+
+    <button id=restaurantButton>Hungry in Utah County?</button>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("restaurantButton").onclick = function () {
+        axios.get("http:localhost:4000/api/restaurant").then(function (response) {
+          const data = response.data;
+          window.open(data);
+        });
+      }
+    </script>
+<!-- 
+    <form>
+      <input 
+      type="float"
+      id="faveColor"
+      placeholder="What is your favorite color?"/>
+    </form> -->
+
+    </script>
+    </script>
+  </body>
+</html>
